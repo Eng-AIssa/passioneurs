@@ -16,8 +16,3 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::resource('customers', CustomerController::class);
-
-Route::get("customersSearch/{search}", [CustomerController::class, 'searchIndex'])->name('customersSearch');
-Route::get('se', function ($q){
-    dd($q);
-})->name('se');
