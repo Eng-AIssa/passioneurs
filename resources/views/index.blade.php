@@ -33,7 +33,7 @@
 
 <body class="antialiased">
 <div
-    class="bg-dots-darker relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
+        class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter selection:bg-red-500 selection:text-white">
     <div class="max-w-5xl mx-auto p-6 lg:p-8">
 
         <!-- Passioneurs Logo -->
@@ -52,11 +52,11 @@
 
 
                 <!-- Add Modal -->
-                @include('add-modal')
+                @include('modals.add-modal')
 
                 @if ($errors->any())
                     <!-- Errors Modal -->
-                    @include('errors-modal')
+                    @include('modals.errors-modal')
                 @endif
 
             </div>

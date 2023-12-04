@@ -18,12 +18,17 @@ class CustomerController extends Controller
         return view('index', compact('customers'));
     }
 
-    public function searchIndex($search)
+
+    /**
+     * Display a listing of the resource bassed on givving term.
+     */
+    public function searchIndex()
     {
+        $term = request()->query('term');
 
-        $customers = Customer::where('name', 'like', '%' . $search . '%')->paginate(4);
+        $customers = Customer::where('name', 'like', '%' . $term . '%')->paginate(4);
 
-        return view('index', compact('customers', 'search'));
+        return view('index', compact('customers', 'term'));
     }
 
     /**

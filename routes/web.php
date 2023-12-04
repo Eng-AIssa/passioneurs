@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::resource('customers', CustomerController::class);
+
+Route::get('/', [CustomerController::class, 'index']);
+
+//search
+Route::get('/search', [CustomerController::class, 'searchIndex']);
+
